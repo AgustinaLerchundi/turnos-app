@@ -1,13 +1,20 @@
 import './Home.css';
+import {useNavigate} from 'react-router-dom';
 
 const Home = () => {
+  const navigate = useNavigate();
+  const reserva = () => {
+    navigate('/components/FormReserva');
+  };
+
   return (
     <div className="home">
       <header className="hero">
         <h1>Gestioná tus turnos de forma simple</h1>
         <p>Una solución para profesionales y pacientes</p>
         <div className="hero-buttons">
-          <button>Reservar un turno</button>
+          <button onClick={reserva}>Reservar un turno</button>
+
           <button>Ofrecer mis servicios</button>
         </div>
       </header>
